@@ -1,0 +1,20 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.env
+.venv/
+build/
+dist/
+*.egg-info/
+.DS_Store
+*.sqlite3
+coverage.xml
+
+# Brand/Slidev generated files
+node_modules/
+.slidev/
+playwright-report/
+test-results/
+*.tsbuildinfo
+.coverage

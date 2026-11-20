@@ -1,0 +1,57 @@
+{
+  "mode": "sandbox",
+  "state_names": [
+    "state_1",
+    "state_2"
+  ],
+  "initial_distribution": [
+    1,
+    0
+  ],
+  "cycles": 10,
+  "discount_rate": 0.03,
+  "policies": [
+    {
+      "policy_id": "policy_A",
+      "transition": [
+        [
+          0.9,
+          0.1
+        ],
+        [
+          0.1,
+          0.9
+        ]
+      ],
+      "reward_per_state": [
+        10,
+        4
+      ],
+      "cost_per_state": [
+        2,
+        3
+      ]
+    },
+    {
+      "policy_id": "policy_B",
+      "transition": [
+        [
+          0.8,
+          0.2
+        ],
+        [
+          0.2,
+          0.8
+        ]
+      ],
+      "reward_per_state": [
+        9,
+        4
+      ],
+      "cost_per_state": [
+        1,
+        2
+      ]
+    }
+  ]
+}

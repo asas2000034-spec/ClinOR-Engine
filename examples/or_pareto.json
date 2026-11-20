@@ -1,0 +1,32 @@
+{
+  "mode": "sandbox",
+  "options": [
+    {
+      "option_id": "A",
+      "label": "Synthetic intervention A",
+      "benefit": 75,
+      "burden": 20,
+      "cost": 15,
+      "incompatible_with": [
+        "C"
+      ]
+    },
+    {
+      "option_id": "B",
+      "label": "Synthetic intervention B",
+      "benefit": 60,
+      "burden": 10,
+      "cost": 8
+    },
+    {
+      "option_id": "C",
+      "label": "Synthetic intervention C",
+      "benefit": 82,
+      "burden": 35,
+      "cost": 16,
+      "incompatible_with": [
+        "A"
+      ]
+    }
+  ]
+}

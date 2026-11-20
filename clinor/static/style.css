@@ -1,0 +1,57 @@
+:root {
+  --ink:#17191A; --cut:#C83C2D; --paper:#F6F3EC; --white:#FFFEFB;
+  --slate:#6B7278; --line:#DED9D0;
+  font-family:Inter,"Segoe UI",sans-serif; color:var(--ink); background:var(--paper);
+}
+* {box-sizing:border-box}
+body {margin:0;line-height:1.5}
+.app-shell {display:grid;grid-template-columns:235px minmax(0,1fr)}
+.sidebar {background:var(--ink);color:var(--paper);padding:32px 22px}
+.brand img {width:100%;display:block;margin:0 0 52px}
+.nav-heading,.overline,.eyebrow,.pipeline-label,.breadcrumb {font:600 .75rem/1.6 monospace;letter-spacing:.1em}
+.nav-heading {color:#c2beb6}
+.nav-item {display:block;color:inherit;text-decoration:none;border-top:1px solid #525557;padding:12px 0}
+.nav-item:hover {text-decoration:underline}
+.second,.sidebar-bottom {margin-top:48px}
+.mini-note,.sidebar-bottom {font-size:.88rem}
+.topbar,footer,.section-header,.submit-line,.pipeline-row {display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}
+.topbar {padding:14px 5%;border-bottom:1px solid var(--line);font-size:.84rem}
+.content {width:min(100%,1150px);padding:42px 5%;margin:auto}
+h1,h2,h3 {line-height:1.08;letter-spacing:-.04em}
+h1 {font-size:clamp(2.8rem,5.8vw,6rem);margin:.2em 0}
+h1 span {font-family:"Noto Serif",Georgia,serif;font-weight:normal}
+.intro {max-width:72ch;font-size:1.12rem}
+.eyebrow {color:var(--cut)}
+section,.empty-results,.evidence-card,.pipeline,.notice,.op-result,.finding {padding:clamp(16px,2.2vw,32px);background:var(--white);border:1px solid var(--line);margin:20px 0}
+h2 {font-size:clamp(1.5rem,2.4vw,2.2rem);margin:.28em 0}
+.llm-card,.form-row,.evidence-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.llm-card {grid-template-columns:2fr 1fr;border-top:3px solid var(--ink)}
+.llm-feedback {grid-column:1/-1}
+.llm-feedback:empty {display:none}
+.chip,.evidence-category {display:inline-block;border:1px solid var(--line);padding:4px 9px;font-size:.8rem}
+.micro-note,.submit-caption,small {font-size:.85rem;color:#54595c}
+label {display:block;margin:16px 0 5px;font-weight:600}
+input,textarea,select,button {font:inherit}
+input:not([type=checkbox]),textarea,select {width:100%;background:var(--white);color:var(--ink);border:1px solid var(--slate);padding:10px}
+textarea {resize:vertical}
+button {background:var(--ink);color:var(--white);border:0;padding:11px 18px;cursor:pointer;font-weight:600}
+button:hover {background:#343739}
+.check {display:flex;gap:8px;align-items:baseline;font-size:.92rem;font-weight:400}
+input[type=checkbox] {accent-color:var(--ink)}
+:focus-visible {outline:3px solid var(--cut);outline-offset:3px}
+.submit-line,.method-advisor,.result-heading {margin-top:22px}
+.method-advisor {border-block:1px solid var(--line);padding:18px 0}
+pre {overflow:auto;max-height:30rem}
+a {color:inherit}
+.pipeline-row,footer {font-size:.85rem}
+.evidence-card,.finding {overflow-wrap:anywhere}
+@media(max-width:760px) {
+  .app-shell,.llm-card,.form-row,.evidence-grid {grid-template-columns:1fr}
+  .sidebar {display:flex;flex-wrap:wrap;gap:6px 16px;padding:16px 5%}
+  .brand {width:100%}
+  .brand img {width:150px;margin:0 0 10px}
+  .sidebar .nav-heading,.mini-note,.sidebar-bottom {display:none}
+  .nav-item {padding:4px 0;font-size:.84rem}
+  .content {padding-top:24px}
+}
+details {overflow-wrap:anywhere;padding:12px 0} summary {cursor:pointer;font-weight:600}

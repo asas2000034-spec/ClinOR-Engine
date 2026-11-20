@@ -1,0 +1,61 @@
+{
+  "mode": "sandbox",
+  "options": [
+    {
+      "option_id": "A",
+      "label": "High-variance scenario A",
+      "benefit": 80,
+      "burden": 0,
+      "cost": 2
+    },
+    {
+      "option_id": "B",
+      "label": "Stable scenario B",
+      "benefit": 60,
+      "burden": 0,
+      "cost": 2
+    }
+  ],
+  "strategy": "maximin",
+  "max_selections": 1,
+  "min_selections": 1,
+  "budget": 3,
+  "scenarios": [
+    {
+      "scenario_id": "high_demand",
+      "probability": 0.8,
+      "payoffs": [
+        {
+          "option_id": "A",
+          "benefit": 95,
+          "burden": 0,
+          "cost": 2
+        },
+        {
+          "option_id": "B",
+          "benefit": 60,
+          "burden": 0,
+          "cost": 2
+        }
+      ]
+    },
+    {
+      "scenario_id": "low_demand",
+      "probability": 0.2,
+      "payoffs": [
+        {
+          "option_id": "A",
+          "benefit": 10,
+          "burden": 0,
+          "cost": 2
+        },
+        {
+          "option_id": "B",
+          "benefit": 60,
+          "burden": 0,
+          "cost": 2
+        }
+      ]
+    }
+  ]
+}

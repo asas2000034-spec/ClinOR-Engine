@@ -1,0 +1,23 @@
+{
+  "mode": "sandbox",
+  "simulations": 2000,
+  "seed": 42,
+  "options": [
+    {
+      "option_id": "A",
+      "benefit_mean": 70,
+      "benefit_sd": 12,
+      "burden_mean": 25,
+      "burden_sd": 8,
+      "cost": 12
+    },
+    {
+      "option_id": "B",
+      "benefit_mean": 65,
+      "benefit_sd": 6,
+      "burden_mean": 15,
+      "burden_sd": 5,
+      "cost": 9
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="EVIDORIX — evidence-first AI research and clinician-supervised decision optimization." />
+  <title>EVIDORIX · Evidence to Defensible Decisions</title>
+  <link rel="icon" href="/static/brand/mark-ink.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#F6F3EC" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="EVIDORIX home"><img src="/static/brand/wordmark-reversed.svg" alt="EVIDORIX" /></a>
+    <div class="nav-heading">WORKSPACE</div>
+    <a class="nav-item active" href="#research"><span>⌕</span> Evidence discovery</a>
+    <a class="nav-item" href="#optimization"><span>◇</span> OR engine lab</a>
+    <a class="nav-item" href="#llm"><span>◎</span> LLM connection</a>
+    <a class="nav-item" href="/docs" target="_blank"><span>↗</span> Developer API</a>
+    <div class="nav-heading second">FRAMEWORK</div>
+    <div class="mini-note"><strong>Research protocol · v0.3</strong><p>Search broadly. Track provenance. Optimize only reviewed inputs.</p></div>
+    <div class="sidebar-bottom"><span class="status-light"></span> Research prototype <span>v0.3.1</span></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><span><span class="breadcrumb">WORKSPACE</span> / Evidence discovery</span><div class="top-right">Research prototype</div></header>
+    <div class="content">
+      <div class="eyebrow">CLINICAL DECISION INTELLIGENCE</div>
+      <h1>From evidence to<br /><span>defensible decisions.</span></h1>
+      <p class="intro">An open, condition-agnostic research engine. Discover indexed clinical evidence, trace every source, and compare explicitly reviewed alternatives with mathematical constraints.</p>
+      <section class="llm-card" id="llm" aria-labelledby="llm-title">
+        <div class="llm-info"><div class="overline">MODEL RUNTIME</div><h2 id="llm-title">Local-first language models</h2>
+          <p id="llm-summary">Reading configured model runtime…</p>
+          <p class="micro-note">Provider and model are configured on the server, never in the browser. The local LLM requires no cloud account; literature discovery still uses external research services.</p></div>
+        <div class="llm-actions"><span id="llm-pill" class="chip quiet">Checking configuration</span><label class="check"><input id="probe-consent" type="checkbox" /> Allow a cloud connectivity test for this request</label><button id="check-llm" type="button" class="secondary-btn">Test model</button></div>
+        <div id="llm-feedback" aria-live="polite" class="llm-feedback"></div>
+      </section>
+      <section class="search-card" id="research" aria-labelledby="research-title">
+        <div class="section-header"><div><div class="overline">01 / DISCOVER</div><h2 id="research-title">Start a clinical evidence search</h2></div><span class="chip">Cross-specialty</span></div>
+        <form id="research-form">
+          <p>Use a general research question. Omit names, dates of birth, record numbers, and other patient identifiers.</p>
+          <label for="condition">Clinical topic or condition</label>
+          <input id="condition" name="condition" value="rheumatoid arthritis" minlength="3" maxlength="180" placeholder="e.g. heart failure, asthma, migraine, rheumatoid arthritis" required />
+          <label for="question">Research question</label>
+          <textarea id="question" rows="2" maxlength="500">Identify current practice guideline candidates and high-quality treatment evidence.</textarea>
+          <div class="form-row"><div><label for="jurisdiction">Jurisdiction</label><select id="jurisdiction"><option value="international">International</option><option value="Saudi Arabia">Saudi Arabia</option><option value="United States">United States</option><option value="United Kingdom">United Kingdom</option></select></div><div><label for="limit">Maximum references</label><select id="limit"><option value="9">9 references</option><option value="12" selected>12 references</option><option value="20">20 references</option></select></div></div>
+          <label class="check"><input type="checkbox" id="consent" required /> I consent to sending only this de-identified research topic to external literature services.</label>
+          <label class="check"><input type="checkbox" id="use-ai" checked /> Use configured LLM for search query planning and evidence synthesis (Ollama, LM Studio or cloud).</label>
+          <label class="check"><input type="checkbox" id="cloud-consent" /> I explicitly consent to cloud LLM processing of this de-identified topic and retrieved evidence (only used when server is configured for cloud inference).</label>
+          <div class="submit-line"><button type="submit" id="search-btn">Research evidence <span>↗</span></button><span class="submit-caption">Results are research candidates, not approved clinical rules.</span></div>
+        </form>
+      </section>
+      <div id="results" class="results" aria-live="polite"><div class="empty-results"><span class="empty-icon">⌕</span><h3>Your research begins here</h3><p>Search across specialties. Each retrieved record includes a source link, publication metadata, and review status.</p></div></div>
+      <section class="optimization-card" id="optimization">
+        <div class="section-header"><div><div class="overline">02 / MODEL &amp; SOLVE</div><h2>Operations research workbench</h2></div><span class="chip quiet">9 engine families / Sandbox</span></div>
+        <p>Compare <strong>fictional, reviewer-scored options</strong> with multiple OR methods, or simulate operational problems. All data in this lab are synthetic and are not treatment recommendations.</p>
+        <div class="method-advisor"><div class="overline">AI / METHODOLOGY</div><h3>Ask your LLM about the OR methods</h3>
+        <p>The LLM explains a rule-based shortlist; it cannot change the algorithm or approve clinical decisions.</p>
+        <label for="or-question">Describe the decision problem</label>
+        <textarea id="or-question" rows="2">Compare several intervention options by multiple criteria while accounting for uncertainty.</textarea>
+        <div class="method-checkboxes">
+          <label class="check"><input id="adv-criteria" type="checkbox" checked /> Multiple criteria</label>
+          <label class="check"><input id="adv-uncertainty" type="checkbox" checked /> Uncertainty</label>
+          <label class="check"><input id="adv-resources" type="checkbox" /> Resource constraints</label>
+          <label class="check"><input id="adv-sequential" type="checkbox" /> Sequential decisions</label>
+          <label class="check"><input id="adv-probabilities" type="checkbox" /> Known probabilities</label>
+          <label class="check"><input id="adv-flow" type="checkbox" /> Patient flow / queues</label>
+        </div>
+        <label class="check"><input id="or-cloud-consent" type="checkbox" /> Allow cloud LLM processing of this problem description if configured (local LLM does not require this).</label>
+        <button type="button" class="secondary-btn" id="ask-or-llm">Explain methods with LLM →</button>
+        <div id="method-results" aria-live="polite"></div></div>
+        <label for="engine-picker">Select mathematical method</label>
+        <select id="engine-picker">
+          <option value="milp">MILP · constrained selection</option>
+          <option value="cp_sat">CP-SAT · discrete logic (optional package)</option>
+          <option value="mcda" selected>MCDA · TOPSIS / weighted sum</option>
+          <option value="pareto">Pareto · nondominated options</option>
+          <option value="scenarios">Stochastic / robust scenario optimization</option>
+          <option value="monte_carlo">Monte Carlo · uncertainty analysis</option>
+          <option value="markov">Markov · cohort outcomes</option>
+          <option value="dynamic_programming">Dynamic programming · sequential decisions</option>
+          <option value="queueing">Queueing · service capacity</option>
+        </select>
+        <label for="or-json">Synthetic model input · editable JSON</label>
+        <textarea id="or-json" rows="13" spellcheck="false" aria-label="OR request JSON"></textarea>
+        <div class="submit-line"><button class="secondary-btn" id="run-demo" type="button">Run selected engine →</button><span class="submit-caption">Inspect every assumption and constraint before interpretation.</span></div>
+        <div id="optimization-results" aria-live="polite"></div>
+      </section>
+      <div class="pipeline"><div class="pipeline-label">SYSTEM ARCHITECTURE</div><div class="pipeline-row"><span>Local/cloud LLM query planning</span><b>→</b><span>Medical literature</span><b>→</b><span>Evidence provenance</span><b>→</b><span>Human review</span><b>→</b><span>OR engine selection</span></div></div>
+      <details><summary>Session request history</summary><ol id="audit-log" aria-live="polite"></ol></details>
+      <footer><span>EVIDORIX · Open-source research prototype</span><span>Not for autonomous clinical decision-making</span></footer>
+    </div>
+  </main>
+</div>
+<script src="/static/app.js" defer></script>
+</body>
+</html>

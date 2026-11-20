@@ -1,0 +1,14 @@
+{
+  "mode": "sandbox",
+  "options": [
+    {"option_id": "A", "label": "Fictional intervention A", "benefit": 75, "burden": 20, "cost": 15, "incompatible_with": ["C"]},
+    {"option_id": "B", "label": "Fictional intervention B", "benefit": 60, "burden": 10, "cost": 8},
+    {"option_id": "C", "label": "Fictional intervention C", "benefit": 82, "burden": 35, "cost": 16, "incompatible_with": ["A"]}
+  ],
+  "max_selections": 2,
+  "min_selections": 1,
+  "budget": 25,
+  "benefit_weight": 1,
+  "burden_weight": 1,
+  "cost_weight": 0
+}

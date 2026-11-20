@@ -1,0 +1,7 @@
+{
+  "mode": "sandbox",
+  "arrival_rate": 8,
+  "service_rate_per_server": 5,
+  "servers": 2,
+  "rate_unit": "hour"
+}

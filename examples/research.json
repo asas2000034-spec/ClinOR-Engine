@@ -1,0 +1,8 @@
+{
+  "condition": "rheumatoid arthritis",
+  "question": "Identify current treatment guidelines and systematic reviews; do not recommend a patient-specific treatment.",
+  "jurisdiction": "international",
+  "max_results": 10,
+  "consent_external_search": true,
+  "use_ai": false
+}

@@ -1,0 +1,22 @@
+EVIDORIX — EXECUTE THE COMPLETE ENGINEERING MISSION
+
+Open this extracted repository as the working directory. Read AGENTS.md, START_HERE.md, CODEX_MASTER_COMMAND.md, BRAND_IMPLEMENTATION.md, and design/brand-v2/docs/BRAND_GUIDELINES.md, then inspect all working code, documentation, tests and brand sources.
+
+Do the work; do not stop at planning or writing a prompt. Audit, implement, refactor, run the application, test and fix failures, reproduce mathematical results, verify research citations, test actual local Ollama or LM Studio connectivity when available, and document anything not independently verified.
+
+CRITICAL PRODUCT REQUIREMENTS:
+- English-only end-to-end (en-US, LTR): ALL UI, AI responses, clinical research summaries, OR results, charts, reports, API docs, README, GitHub materials and 23 Slidev brand slides. No Arabic/bilingual interface or translated product collateral. Original-language publication titles/excerpts may be retained when essential for citation fidelity.
+- EVIDORIX Swiss Editorial v2 is the only valid brand. Use design/brand-v2/ source assets/tokens and REMOVE obsolete teal/glow styling. Show real running-app screenshots, not mockups.
+- A general clinical evidence search engine across ALL specialties and conditions, not fixed around diabetes or another disease.
+- Interchangeable local-first LLM (Ollama, LM Studio/OpenAI-compatible local endpoints) with optional per-request-consent cloud integration.
+- Multiple independently testable Operations Research approaches, not only MILP. Route methods according to data and mathematical suitability.
+- Evidence retrieval, reviewed rules, numerical optimization and professional decision support are distinct trust layers. Never auto-promote LLM text to approved prescribing constraints or invent clinical effect sizes.
+- Publication must disclose exact limitations, including lack of validated autonomous treatment selection.
+
+Run and repair tests, lint, app startup, security scans and complete basic desktop/mobile UI review. Improve CI and developer documentation. Preserve existing useful code and compatibility unless migration is justified. No fabricated test results or deployment claims.
+
+AUTHORIZED GITHUB DESTINATION: owner asas2000034-spec / repository ClinOR-Engine / PUBLIC / main, product branding EVIDORIX. Verify GitHub login; create and publish the repository if absent. If it exists, preserve commit history and use a non-destructive branch/PR. Never force push or publish secrets, credentials, real patient data or copyrighted guideline full text. If authentication is required, request the single necessary action.
+
+FINAL REPORT MUST INCLUDE: actual live repository URL (only after publication), commit SHA, CI state, tested commands/results, live app screenshots, local LLM usage, architecture, verified features, open bugs and unvalidated clinical scope.
+
+Execute rather than only propose.

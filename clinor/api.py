@@ -38,6 +38,7 @@ from .or_engine.models import (
 from .or_engine.router import RoutingRequest, recommend_techniques
 from .research import research
 from .schemas import OptimizeRequest, OptimizeResponse, ResearchRequest, ResearchResponse
+from .security import api_auth_error, harden_headers
 
 ROOT = Path(__file__).resolve().parent
 app = FastAPI(title="EVIDORIX Engine", version=__version__, description=(
@@ -53,6 +54,9 @@ _recent_requests: deque[float] = deque()
 @app.middleware("http")
 async def request_budget(request: Request, call_next):
     audit_id = uuid4().hex
+    auth_error = api_auth_error(request, audit_id)
+    if auth_error is not None:
+        return auth_error
     if request.method == "POST":
         now = monotonic()
         while _recent_requests and _recent_requests[0] <= now - 60:
@@ -63,6 +67,7 @@ async def request_budget(request: Request, call_next):
         _recent_requests.append(now)
     response = await call_next(request)
     response.headers["X-Request-ID"] = audit_id
+    harden_headers(response, request)
     return response
 
 

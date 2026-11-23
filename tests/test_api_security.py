@@ -5,7 +5,6 @@ from fastapi.testclient import TestClient
 
 from clinor.api import app
 
-
 KEY = "test-only-random-secret-with-minimum-length-12345"
 
 

@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import hmac
 import os
+
 from fastapi import Request
 from fastapi.responses import JSONResponse
 
